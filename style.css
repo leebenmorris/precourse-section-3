@@ -1,3 +1,22 @@
+body {
+    background-image: url("Gym_Background.jpg");
+    background-size: cover;
+}
+
 h1 {
   color:red;
+}
+
+form {
+  color: white;
+}
+
+input {
+  color: black;
+}
+
+.bmiStatement {
+  color: white;
+  font-size: 36px;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Week 3 Website Project</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <script src="nav.js"></script>
+  <script>document.getElementById('bmiNav').className = "active"</script>
+
+  <div class='container'>
+    <form name="bmiForm">
+      <p class='bmiStatement'>Calculate your BMI to get started:</p>
+      Height:
+      <input type="number" id="height" placeholder="metres"></input>
+      Weight:
+      <input type="number" id="weight" placeholder="kilograms"></input>
+      <input type="button" id="calcBMI" value="Calculate BMI"></input>
+      <input type="number" id="bmi" placeholder="kg/m&sup2;"></input>
+    </form>
+    <div class='bmiStatement'>
+      <p>Please enter your height and weight to calculate your BMI</p>
+      <p style='display:none'>Your BMI is <span id='bmiResult'>#</span>, you are <span id='bmiRange'>#</span>.</p>
+    </div>
+  </div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='main.js'></script>
+</body>
+</html>
