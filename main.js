@@ -8,6 +8,8 @@ $(document).ready(function(){
   var lowNorm = 0
   var highNorm = 0
 
+  $('#height').focus()
+
   $('#calcBMI').click((event) => {
     
     event.preventDefault()
