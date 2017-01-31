@@ -5,7 +5,7 @@ body {
 body::after {
   /* Faking background image opacity - from https://css-tricks.com/snippets/css/transparent-background-images/ */
   content: "";
-  background: url("Gym_Background.jpg") no-repeat center fixed;
+  background: url("../images/Gym_Background.jpg") no-repeat center fixed;
   opacity: 0.6;
   background-size: cover;
   top: 0;
