@@ -1,22 +1,44 @@
 body {
-    background-image: url("Gym_Background.jpg");
-    background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::after {
+  /* Faking background image opacity - from https://css-tricks.com/snippets/css/transparent-background-images/ */
+  content: "";
+  background: url("Gym_Background.jpg") no-repeat center fixed;
+  opacity: 0.6;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 h1 {
   color:red;
 }
 
-form {
+input, label, button {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+label {
   color: white;
 }
 
-input {
+input, button {
   color: black;
 }
 
 .bmiStatement {
-  color: white;
   font-size: 36px;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-weight: bold;
+  color: black; /* fallback for browsers that do not support text-stroke */
+    -webkit-text-fill-color: white; /* will override color */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
+

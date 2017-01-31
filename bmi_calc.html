@@ -8,23 +8,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <script src="nav.js"></script>
   <script>document.getElementById('bmiNav').className = "active"</script>
 
   <div class='container'>
     <form name="bmiForm">
       <p class='bmiStatement'>Calculate your BMI to get started:</p>
-      Height:
-      <input type="number" id="height" placeholder="metres"></input>
-      Weight:
-      <input type="number" id="weight" placeholder="kilograms"></input>
-      <input type="button" id="calcBMI" value="Calculate BMI"></input>
-      <input type="number" id="bmi" placeholder="kg/m&sup2;"></input>
+      <label>Height:</label>
+      <input id="height" autocomplete="off" placeholder="metres">
+      <label>Weight:</label>
+      <input id="weight" autocomplete="off" placeholder="kilograms">
+      <button id="calcBMI">Calculate BMI</button>
+      <input id="bmi" placeholder="kg/m&sup2;">
     </form>
     <div class='bmiStatement'>
-      <p>Please enter your height and weight to calculate your BMI</p>
-      <p style='display:none'>Your BMI is <span id='bmiResult'>#</span>, you are <span id='bmiRange'>#</span>.</p>
+      <p id='inputStatement'>Please enter your height and weight to calculate your BMI</p>
+      <p id='outputStatement' style='display:none'>Your BMI is <span id='bmiResult'>#</span>, you are <span id='bmiRange'>#</span>.</p>
+      <div id='normalStatement' style='display:none'>
+        <p>The 'healthy weight' BMI range is between 18.5 and 24.9, which for your height is between <span id='lowNorm'>#</span> and <span id='highNorm'>#</span> kg.</p>
+        <p>This means that to be within the healthy range you would have to <span id='loseGain'>#</span> between <span id='lowKg'>#</span> and <span id='highKg'>#</span> kg.</p>
+      </div>
     </div>
   </div>
 
