@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
   var clickCount = 0
@@ -9,8 +10,9 @@ $(document).ready(function(){
   var highNorm = 0
 
   $('#height').focus()
+  $('#bmi').val('')
 
-  $('#calcBMI').click((event) => {
+  $('#calcBMI').click(function(event) {
     
     event.preventDefault()
 
@@ -50,10 +52,11 @@ $(document).ready(function(){
           $('#normalStatement').show()
         } else if(bmi > 24.9) {
           $('#loseGain').text('lose')
-          $('#lowKg').text( (weight - lowNorm).toFixed(1) )
-          $('#highKg').text( (weight - highNorm).toFixed(1) )
+          $('#highKg').text( (weight - lowNorm).toFixed(1) )
+          $('#lowKg').text( (weight - highNorm).toFixed(1) )
           $('#normalStatement').show()
         }
+
       }
     } else {
       clickCount = 0

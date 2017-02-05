@@ -6,21 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <script src="js/nav.js"></script>
-  <script>document.getElementById('bmiNav').className = "active"</script>
+
+  <div id="navArea">
+  </div>
+
+  <script>$('#navArea').load("navJQ.html #mainNav")</script>
 
   <div class='container'>
     <form name="bmiForm">
       <p class='bmiStatement'>Calculate your BMI to get started:</p>
-      <label>Height:</label>
       <input id="height" autocomplete="off" placeholder="metres">
+      <label>Height:</label>
       <label>Weight:</label>
       <input id="weight" autocomplete="off" placeholder="kilograms">
       <button id="calcBMI">Calculate BMI</button>
-      <input id="bmi" placeholder="kg/m&sup2;">
+      <input id="bmi" placeholder="kg/m&sup2">
     </form>
+    
     <div class='bmiStatement'>
       <p id='inputStatement'>Please enter your height and weight to calculate your BMI</p>
       <p id='outputStatement' style='display:none'>Your BMI is <span id='bmiResult'>#</span>, you are <span id='bmiRange'>#</span>.</p>
@@ -31,10 +37,7 @@
     </div>
   </div>
 
-
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='js/main.js'></script>
+
 </body>
 </html>

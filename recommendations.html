@@ -6,19 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-  <script src="js/nav.js"></script>
-  <script>document.getElementById('recNav').className = "active"</script>
+  
+  <div id="navArea">
+  </div>
+  
+  <script>$('#navArea').load("navJQ.html #mainNav")</script>
 
   <div class="container">
     <h1>Recommendations Page</h1>
     <p>This is some text.</p>
   </div>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='js/main.js'></script>
+
 </body>
 </html>
